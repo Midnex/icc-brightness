@@ -1,4 +1,5 @@
-# Copyright 2017 - 2019, Udi Fuchs
+# Copyright 2017 - 2019, Udi Fuchs (original author)
+# Copyright 2021, Kahlil Hodgson (modifications)
 # SPDX-License-Identifier: MIT
 
 BIN_PATH=/usr/local/bin/

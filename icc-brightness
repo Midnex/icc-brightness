@@ -1,4 +1,9 @@
 #! /usr/bin/env python3
+
+# Copyright 2017 - 2019, Udi Fuchs (original author)
+# Copyright 2021, Kahlil Hodgson (modifications)
+# SPDX-License-Identifier: MIT
+
 """Control OLED display brightness by applying ICC color profiles.
 
 icc-brightness set brightness max-brightness - set brightness manually
