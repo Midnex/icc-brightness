@@ -71,7 +71,7 @@ def get_object_path(out):
     # separated by blank lines. In each block the 'Object Path' line will always occur
     # before the 'Model' or 'Embeded' line, so we repeatedly set the object_path and
     # only break when we find an appropriate match. If we are not targeting a specific
-    # device, we just pick the first embedded device we find.
+    # device, we just pick the first embedded device we find (i.e. the laptops screen).
 
     object_path = None
     for line in out.decode('utf8').split('\n'):
