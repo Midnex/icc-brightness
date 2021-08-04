@@ -141,9 +141,14 @@ def rounded(brightness, max_brightness, factor=0.05):
 
 
 def icc_brightness(brightness, max_brightness):
+    """Set brightness using an appropriate color profile"""
 
     logging.debug('Searching for device')
     device_path = find_device_path()
+    if device_path is None:
+        # This could happen during startup if the colord is not running yet
+        logging.warn('No matching device found')
+        return
 
     brightness = rounded(brightness, max_brightness)
     logging.debug('Rounding brightness ratio to %.2f', brightness/max_brightness)
