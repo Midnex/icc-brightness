@@ -1,6 +1,6 @@
 # ICC Brightness
 
-Control OLED display brightness by applying ICC color profiles.
+Control display brightness by applying ICC color profiles.
 
 *This is a maintained fork of the
 [icc-brightness](https://github.com/udifuchs/icc-brightness) project by Udi
@@ -9,10 +9,9 @@ Fuchs.*
 ## Introduction
 
 This tool is a work-around for displays whose brightness control is not
-supported by the Linux kernel versions before 5.12.  Even if you have a more
-recent kernel, you may prefer the brightness values that this tool provides.  It
-performs well on OLED displays, since these have very dark black point and their
-power consumption is relative to the brightness of the viewed content.
+supported by the Linux kernel yet. It performs well on OLED displays, since these 
+have very dark black point and their power consumption is relative to the 
+brightness of the viewed content.
 
 This tool can also be used on an LCD display, but in that case you really want
 to control the brightness directly using the display backlight.
@@ -20,10 +19,9 @@ to control the brightness directly using the display backlight.
 By default this tool targets embedded laptop displays, however, you can use the
 `--target` option described below to target external displays instead.
 
-This tool was developed by @udifuchs for the Lenovo ThinkPad X1 Yoga OLED
-display.  Later development by @tartansandal was performed on a Dell XPS 15 7590
-with an OLED display.
-
+Lenovo ThinkPad X1 Yoga by @udifuchs
+Dell XPS 14 7590 by @tartansandal
+Razer Blade/Stealth by @midnex
 ## Build
 
 The tool consists of an Python script, `icc-brightness`, which is a wrapper
@@ -113,11 +111,11 @@ force the profiles to be regenerated with each new setting.
 
 ```console
 $ ./icc-brightness clean
-2021-08-17 11:34:56,362 - INFO: Removing: /home/kal/.local/share/icc/brightness_102_512.icc
-2021-08-17 11:34:56,376 - INFO: Removing: /home/kal/.local/share/icc/brightness_128_512.icc
+2021-08-17 11:34:56,362 - INFO: Removing: ~/.local/share/icc/brightness_102_512.icc
+2021-08-17 11:34:56,376 - INFO: Removing: ~/.local/share/icc/brightness_128_512.icc
 ...
-2021-08-17 11:34:56,700 - INFO: Removing: /home/kal/.local/share/icc/brightness_486_512.icc
-2021-08-17 11:34:56,730 - INFO: Removing: /home/kal/.local/share/icc/brightness_435_512.icc
+2021-08-17 11:34:56,700 - INFO: Removing: ~/.local/share/icc/brightness_486_512.icc
+2021-08-17 11:34:56,730 - INFO: Removing: ~/.local/share/icc/brightness_435_512.icc
 ```
 
 The `list` mode lists the device models that the script can currently 'see' and
@@ -192,5 +190,5 @@ rm -f ~/.config/autostart/icc-brightness.desktop
 
 ## Thanks
 
-Huge thanks to Udi Fuchs (@udifuchs) for creating the initial project and making
-my shiny new laptop usable.
+Huge thanks to Udi Fuchs (@udifuchs) for creating the initial project and all 
+the contributors.
